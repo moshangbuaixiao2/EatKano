@@ -181,18 +181,22 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
     let _gameStartTime, _gameStartDatetime;
 
     function gameInit() {
+        int a=Math.ceil(Math.random()*3)
+        if（a=1）{
         createjs.Sound.registerSound({
             src: "./static/music/err.mp3",
             id: "err"
         });
+            }else if（a=2）{
         createjs.Sound.registerSound({
             src: "./static/music/end.mp3",
             id: "end"
-        });
+        });}else if（a=3）{
         createjs.Sound.registerSound({
             src: "./static/music/tap.mp3",
             id: "tap"
         });
+            }
         gameRestart();
     }
 
